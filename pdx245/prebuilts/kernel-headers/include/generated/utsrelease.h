@@ -1,0 +1,1 @@
+#define UTS_RELEASE "6.1.75-android14-11-g48b922851ac5-ab12039954"
