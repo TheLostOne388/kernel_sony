@@ -2,21 +2,22 @@
 #define _LINUX_NFCINFO_H
 
 #include <linux/types.h>
+#include <linux/ioctl.h>
 
-/* NFC Info Constants */
-#define NFC_MAX_SIZE 256
-
-/* NFC Info Commands */
+/* NFC IOCTL */
 #define NFCC_GET_INFO  _IOR('N', 0x20, unsigned int)
-#define NFCC_RESET     _IO('N', 0x21)
 
-/* NFC Info Structure */
-struct nfcinfo {
-    unsigned int chip_type;
-    unsigned int rom_version;
-    unsigned int fw_major;
-    unsigned int fw_minor;
-    char nfc_device_type[NFC_MAX_SIZE];
+/* NFC chip information structure */
+struct nqx_info {
+    __u8 chip_type;
+    __u8 rom_version;
+    __u8 fw_major;
+    __u8 fw_minor;
+};
+
+struct nqx_uinfo {
+    __u32 i;
+    struct nqx_info info;  // Nested structure for the actual chip info
 };
 
 #endif /* _LINUX_NFCINFO_H */
