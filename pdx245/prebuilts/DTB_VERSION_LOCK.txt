@@ -1,0 +1,5 @@
+# DTB VERSION LOCK - DO NOT MODIFY
+This DTB is from 78 firmware (69.1.A.2.78)
+SHA256: 1c0169f21f3f91e9af3c927ea32dddb1a2523d8a82ebc654a596501c9d8d4d0e
+DO NOT replace with 216 firmware DTB (efeb570b...)
+Last verified: 2025-10-11
